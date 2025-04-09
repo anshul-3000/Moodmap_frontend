@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# 🌐 MoodMap – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive real-time emotion detection interface built with **React** and **Tailwind CSS**.  
+This frontend connects to a Flask backend to display live webcam feed and detect human emotions with elegant UI, dark mode, and responsive design.
 
-## Available Scripts
+🔗 **Live Demo**: [https://super-snickerdoodle-46bef1.netlify.app](https://super-snickerdoodle-46bef1.netlify.app)
 
-In the project directory, you can run:
+> 💻 Real-time camera stream powered by Flask backend running locally.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📸 UI Preview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![MoodMap Frontend Preview](Frontend.png)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚡ Features
 
-### `npm run build`
+- 🧠 Live emotion detection from webcam feed
+- 🌙 Toggleable dark/light mode UI
+- 🎛️ Start & stop detection with animated buttons
+- 📱 Fully responsive layout
+- 🎥 Smooth webcam stream integration
+- 🖼️ Background image, modern layout, and Framer Motion animations (optional)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React.js** – Frontend framework
+- **Tailwind CSS** – Styling utility classes
+- **React Hooks** – For managing detection state
+- **Heroicons** / **React Icons** – For minimalistic icons
+- **Flask (API)** – Backend service (local)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the frontend repo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/anshul-3000/Moodmap_frontend.git
+cd Moodmap_frontend
+```
+## 2. Install dependencies
+```bash
+npm install
+```
+## 3. Connect to backend
+Make sure the Flask backend is running locally at:
+```arduino
+http://localhost:5000
+```
+The backend must be run locally to access your webcam.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 4. Update backend URL
+In WebcamViewer.js, update:
+```js
+const BACKEND_URL = "http://localhost:5000"; // or your live backend if hosted locally
+```
+### 🚀 Run the App
+```bash
+npm start
+```
+App will be available at:
+🌍 http://localhost:3000
 
-## Learn More
+### 🛰️ Production Build (Optional)
+```bash
+npm run build
+```
+Deploy the /build folder to Netlify, Vercel, or any static host.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🤝 Backend Repository
+[🔗 MoodMap Backend GitHub](https://github.com/anshul-3000/Moodmap_backend)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 📦 Flask backend handles:
+-Video feed
+-Emotion detection
+-REST API
 
-### Code Splitting
+### 👨‍💻 Developed By
+Anshul Chaudhary
+🚀 Full Stack Developer | ML Engineer | UI/UX Enthusiast
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Made with 💙 using React, Tailwind, Flask & TensorFlow
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📌 Note
+-Webcam stream is served via Flask backend, which must be run locally due to hardware access limitations.
+-If deploying backend to cloud, use image POST-based prediction or WebRTC with socket streaming (future feature!).
