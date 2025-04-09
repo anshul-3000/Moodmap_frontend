@@ -77,9 +77,9 @@ Deploy the /build folder to Netlify, Vercel, or any static host.
 [🔗 MoodMap Backend GitHub](https://github.com/anshul-3000/Moodmap_backend)
 
 ### 📦 Flask backend handles:
--Video feed
--Emotion detection
--REST API
+- Video feed
+- Emotion detection
+- REST API
 
 ### 👨‍💻 Developed By
 Anshul Chaudhary
